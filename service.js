@@ -17,6 +17,10 @@ class ServiceRegistry extends service.Service {
 	get autostart() {
 		return true;
 	}
+
+	endpointsMatching(query) {
+		return [];
+	}
 }
 
 module.exports.registerWithManager = manager =>
