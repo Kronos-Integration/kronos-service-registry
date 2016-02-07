@@ -18,6 +18,14 @@ class ServiceRegistry extends service.Service {
 		return true;
 	}
 
+	registerService(name, options) {
+		this.info({
+			message: 'registerService',
+			name: name,
+			options: options
+		});
+	}
+
 	endpointsMatching(query) {
 		return [];
 	}
