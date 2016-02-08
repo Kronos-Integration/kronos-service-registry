@@ -24,6 +24,11 @@ class ServiceRegistry extends service.Service {
 			name: name,
 			options: options
 		});
+		return Promise.resolve();
+	}
+
+	unregisterService(name) {
+		return Promise.resolve();
 	}
 
 	endpointsMatching(query) {
