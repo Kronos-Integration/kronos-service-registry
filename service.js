@@ -31,8 +31,8 @@ class ServiceRegistry extends service.Service {
 		return Promise.resolve();
 	}
 
-	endpointsMatching(query) {
-		return [];
+	* serviceURLs(name) {
+		return undefined;
 	}
 }
 
