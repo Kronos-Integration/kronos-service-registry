@@ -1,13 +1,14 @@
 /* jslint node: true, esnext: true */
 
-"use strict";
+'use strict';
 
-const service = require('kronos-service');
+const endpoint = require('kronos-endpoint'),
+	service = require('kronos-service');
 
 class ServiceRegistry extends service.Service {
 
 	static get name() {
-		return "registry";
+		return 'registry';
 	}
 
 	get type() {
@@ -16,6 +17,16 @@ class ServiceRegistry extends service.Service {
 
 	get autostart() {
 		return true;
+	}
+
+	constructor(config, owner) {
+		super(config, owner);
+
+		this.addEndpoint(new endpoint.ReceiveEndpoint('nodes', this)).receive = request => {
+			return Promise.resolve([{
+				id: 'localhost'
+			}]);
+		};
 	}
 
 	registerService(name, options) {
