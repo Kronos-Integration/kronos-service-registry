@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "dependencies": {
-    "kronos-service": "^2.17.2"
+    "kronos-service": "^2.18.3"
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "cz-conventional-changelog": "1.1.5",
+    "cz-conventional-changelog": "^1.1.6",
     "istanbul": "^0.4.3",
     "jsdoc": "3.4.0",
     "mocha": "2.4.5",
