@@ -1,7 +1,7 @@
 {
   "name": "kronos-service-registry",
   "version": "0.0.0-semantic-release",
-  "description": "",
+  "description": "dummy service registry implementation",
   "main": "service.js",
   "keywords": [
     "kronos-service"
@@ -31,16 +31,13 @@
     "mocha": "2.4.5",
     "semantic-release": "6.2.1"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
+  "contributors": [{
+    "name": "Torsten Link",
+    "email": "torstenlink@gmx.de"
+  }, {
+    "name": "Markus Felten",
+    "email": "markus.felten@gmx.de"
+  }],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=5"
