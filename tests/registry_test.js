@@ -1,6 +1,6 @@
 /*global describe, it*/
 /* jslint node: true, esnext: true */
-"use strict";
+'use strict';
 
 const chai = require('chai');
 const assert = chai.assert;

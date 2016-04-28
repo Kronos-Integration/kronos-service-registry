@@ -50,6 +50,6 @@ class ServiceRegistry extends service.Service {
 module.exports.registerWithManager = manager =>
 	manager.registerServiceFactory(ServiceRegistry).then(sr =>
 		manager.declareService({
-			'type': sr.name,
-			'name': sr.name
+			type: sr.name,
+			name: sr.name
 		}));
