@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "dependencies": {
-    "kronos-service": "^2.18.7"
+    "kronos-service": "^3.2.1"
   },
   "devDependencies": {
     "chai": "3.5.0",
@@ -29,7 +29,7 @@
     "istanbul": "0.4.3",
     "jsdoc": "3.4.0",
     "mocha": "2.4.5",
-    "semantic-release": "6.2.1"
+    "semantic-release": "^6.2.2"
   },
   "contributors": [
     {
