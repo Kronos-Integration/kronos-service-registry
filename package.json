@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "dependencies": {
-    "kronos-service": "^3.2.10"
+    "kronos-service": "^3.2.11"
   },
   "devDependencies": {
     "chai": "3.5.0",
