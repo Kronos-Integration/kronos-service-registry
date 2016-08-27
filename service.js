@@ -11,10 +11,6 @@ class ServiceRegistry extends service.Service {
 		return 'registry';
 	}
 
-	get type() {
-		return ServiceRegistry.name;
-	}
-
 	get autostart() {
 		return true;
 	}
