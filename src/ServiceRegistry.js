@@ -2,10 +2,17 @@
 
 'use strict';
 
-const endpoint = require('kronos-endpoint'),
-	service = require('kronos-service');
+import {
+	ReceiveEndpoint
+}
+from 'kronos-endpoint';
 
-class ServiceRegistry extends service.Service {
+import {
+	Service
+}
+from 'kronos-service';
+
+class ServiceRegistry extends Service {
 
 	static get name() {
 		return 'registry';
@@ -18,7 +25,7 @@ class ServiceRegistry extends service.Service {
 	constructor(config, owner) {
 		super(config, owner);
 
-		this.addEndpoint(new endpoint.ReceiveEndpoint('nodes', this)).receive = request => {
+		this.addEndpoint(new ReceiveEndpoint('nodes', this)).receive = request => {
 			return Promise.resolve([{
 				id: 'localhost'
 			}]);
@@ -39,13 +46,20 @@ class ServiceRegistry extends service.Service {
 	}
 
 	* serviceURLs(name) {
+		yield undefined;
 		return undefined;
 	}
 }
 
-module.exports.registerWithManager = manager =>
-	manager.registerServiceFactory(ServiceRegistry).then(sr =>
+function registerWithManager(manager) {
+	return manager.registerServiceFactory(ServiceRegistry).then(sr =>
 		manager.declareService({
 			type: sr.name,
 			name: sr.name
 		}));
+}
+
+export {
+	ServiceRegistry,
+	registerWithManager
+};
