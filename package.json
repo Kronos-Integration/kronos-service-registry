@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "dummy service registry implementation",
   "main": "dist/module.js",
-  "module": "src/ServiceRegistry.js",
+  "module": "src/service-registry.js",
   "keywords": [
     "kronos-service"
   ],
@@ -29,15 +29,16 @@
     "kronos-service": "^4.8.1"
   },
   "devDependencies": {
+    "ava": "^0.23.0",
+    "babel-preset-env": "^1.6.1",
+    "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^3.0.1",
     "markdown-doctest": "^0.9.1",
     "nyc": "^11.3.0",
     "rollup": "^0.51.5",
-    "semantic-release": "^9.1.1",
-    "jsdoc-babel": "^0.3.0",
-    "ava": "^0.23.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-multi-entry": "^2.0.2",
+    "semantic-release": "^9.1.1",
     "xo": "^0.19.0"
   },
   "contributors": [

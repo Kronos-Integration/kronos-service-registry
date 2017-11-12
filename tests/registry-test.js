@@ -1,8 +1,17 @@
-/* global describe, it*/
-/* jslint node: true, esnext: true */
-'use strict';
+import { Service, ServiceProviderMixin } from 'kronos-service';
+import { registerWithManager } from '../src/service-registry';
 
-const chai = require('chai');
-const assert = chai.assert;
-const expect = chai.expect;
-const should = chai.should();
+import test from 'ava';
+
+class ServiceProvider extends ServiceProviderMixin(Service) {}
+
+const sp = new ServiceProvider();
+
+test('registry service state', async t => {
+  await registerWithManager(sp);
+
+  const registry = sp.services.registry;
+  await registry.start();
+
+  t.is(registry.state, 'running');
+});
