@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "dependencies": {
-    "kronos-service": "^4.8.1"
+    "kronos-service": "^4.10.0"
   },
   "devDependencies": {
     "ava": "^0.23.0",
