@@ -2,11 +2,21 @@ import { ReceiveEndpoint } from 'kronos-endpoint';
 
 import { Service } from 'kronos-service';
 
+/**
+ * Service registry
+ */
 export class ServiceRegistry extends Service {
+  /**
+   * @return {string} 'registry'
+   */
   static get name() {
     return 'registry';
   }
 
+  /**
+   * Always start
+   * @return {boolean} true
+   */
   get autostart() {
     return true;
   }
@@ -14,27 +24,26 @@ export class ServiceRegistry extends Service {
   constructor(config, owner) {
     super(config, owner);
 
-    this.addEndpoint(new ReceiveEndpoint('nodes', this)).receive = request => {
-      return Promise.resolve([
+    this.addEndpoint(
+      new ReceiveEndpoint('nodes', this)
+    ).receive = async request => {
+      return [
         {
           id: 'localhost'
         }
-      ]);
+      ];
     };
   }
 
-  registerService(name, options) {
+  async registerService(name, options) {
     this.info({
       message: 'registerService',
       name: name,
       options: options
     });
-    return Promise.resolve();
   }
 
-  unregisterService(name) {
-    return Promise.resolve();
-  }
+  async unregisterService(name) {}
 
   *serviceURLs(name) {
     yield undefined;
