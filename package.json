@@ -1,12 +1,23 @@
 {
   "name": "kronos-service-registry",
   "version": "0.0.0-semantic-release",
-  "description": "dummy service registry implementation",
   "main": "dist/module.js",
   "module": "src/service-registry.js",
+  "description": "dummy service registry implementation",
   "keywords": [
     "kronos-service"
   ],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "test": "ava",
@@ -18,14 +29,6 @@
     "prepare": "rollup -c",
     "lint": "documentation lint src/service-registry.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-service-registry.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-service-registry/issues"
-  },
-  "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "dependencies": {
     "kronos-service": "^4.10.0"
   },
@@ -39,37 +42,17 @@
     "xo": "^0.19.0",
     "documentation": "^5.3.5"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
-  "license": "BSD-2-Clause",
   "engines": {
     "node": ">=8.9.3"
   },
-  "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "report-dir": "./coverage"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-service-registry.git"
   },
-  "template": {
-    "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
-    }
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-service-registry/issues"
   },
-  "xo": {
-    "space": true
-  },
+  "homepage": "https://github.com/Kronos-Integration/kronos-service-registry#readme",
   "ava": {
     "files": [
       "build/*-test.js"
@@ -80,5 +63,22 @@
     "require": [
       "babel-register"
     ]
+  },
+  "nyc": {
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "./coverage"
+  },
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   }
 }
