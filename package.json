@@ -30,7 +30,7 @@
     "lint": "documentation lint src/service-registry.js"
   },
   "dependencies": {
-    "kronos-service": "^4.10.0"
+    "kronos-service": "^4.14.2"
   },
   "devDependencies": {
     "ava": "^0.24.0",
