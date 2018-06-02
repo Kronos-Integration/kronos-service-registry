@@ -1,6 +1,9 @@
 {
   "name": "kronos-service-registry",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/module.js",
   "module": "src/service-registry.js",
   "description": "dummy service registry implementation",
