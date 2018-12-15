@@ -35,7 +35,7 @@
     "kronos-service": "^4.15.0"
   },
   "devDependencies": {
-    "ava": "^1.0.0-rc.2",
+    "ava": "^1.0.1",
     "markdown-doctest": "^0.9.1",
     "rollup": "^0.67.4",
     "semantic-release": "^15.13.0",
