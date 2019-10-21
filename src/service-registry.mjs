@@ -1,6 +1,5 @@
-import { ReceiveEndpoint } from 'kronos-endpoint';
-
-import { Service } from 'kronos-service';
+import { ReceiveEndpoint } from '@kronos-integration/endpoint';
+import { Service } from '@kronos-integration/service';
 
 /**
  * Service registry

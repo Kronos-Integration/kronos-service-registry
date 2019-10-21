@@ -1,5 +1,5 @@
-import { Service, ServiceProviderMixin } from 'kronos-service';
-import { registerWithManager } from '../src/service-registry';
+import { Service, ServiceProviderMixin } from '@kronos-integration/service';
+import { registerWithManager } from '../src/service-registry.mjs';
 
 import test from 'ava';
 
