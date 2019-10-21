@@ -1,5 +1,5 @@
 {
-  "name": "@kronos-inegration/service-registry",
+  "name": "@kronos-integration/service-registry",
   "version": "0.0.0-semantic-release",
   "type": "module",
   "publishConfig": {
@@ -30,7 +30,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-inegration/service": "^5.0.0"
+    "@kronos-integration/service": "^5.0.0"
   },
   "devDependencies": {
     "ava": "^2.4.0",
